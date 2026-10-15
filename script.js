@@ -1,33 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-    // === 1. INTRO ANIMATION & PAGE TRANSITION ===
     const introScreen = document.getElementById("intro-screen");
     const hasSeenIntro = sessionStorage.getItem("introPlayed");
 
     if (!hasSeenIntro && introScreen) {
-        // Jika pertama kali buka, mainkan animasi logo
         setTimeout(() => {
-            introScreen.classList.add("hidden"); // Layar meluncur ke atas
-            
-            // Tampilkan isi website setelah layar penutup mulai naik
+            introScreen.classList.add("hidden");
             setTimeout(() => { document.body.classList.add("page-loaded"); }, 400); 
-        }, 2200); // Durasi logo tampil sebelum tirai naik
-        
-        sessionStorage.setItem("introPlayed", "true"); // Tandai bahwa intro sudah diputar
+        }, 2200);
+        sessionStorage.setItem("introPlayed", "true");
     } else {
-        // Jika user pindah halaman/reload, lewati intro agar tidak mengganggu
         if (introScreen) introScreen.style.display = "none";
         setTimeout(() => { document.body.classList.add("page-loaded"); }, 50);
     }
 
-    // === 2. SEAMLESS PAGE TRANSITION (KLIK LINK) ===
     const internalLinks = document.querySelectorAll('a[href$=".html"], a[href^="index.html"], a[href^="inquiry.html"]');
     
     internalLinks.forEach(link => {
         link.addEventListener("click", (e) => {
             const targetUrl = link.getAttribute("href");
             
-            // Abaikan jika hanya klik link scroll (seperti #about)
             if (targetUrl.includes("#") && targetUrl.split("#")[0] === "" || targetUrl.split("#")[0] === window.location.pathname.split("/").pop()) {
                 return; 
             }
@@ -37,14 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.classList.remove("page-loaded");
             document.body.classList.add("page-exit");
             
-            // Tunggu layar gelap sempurna baru pindah HTML
             setTimeout(() => {
                 window.location.href = targetUrl;
             }, 400);
         });
     });
 
-    // === 3. DARK / LIGHT MODE LOGIC ===
     const themeToggleBtn = document.getElementById("theme-toggle");
     const themeIcon = document.getElementById("theme-icon");
     const htmlEl = document.documentElement;
@@ -73,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // === 4. CUSTOM CURSOR & MAGNETIC BUTTON ===
     const cursor = document.getElementById("cursor");
     const interactables = document.querySelectorAll(".interactive, a, button");
     
@@ -103,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // === 5. SCROLL REVEAL ANIMATION ===
     const revealElements = document.querySelectorAll(".reveal");
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -117,7 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
     revealElements.forEach(el => revealObserver.observe(el));
 });
 
-// Menghilangkan hash (#work, #about) dari Address Bar setelah di-scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -129,13 +115,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth'
             });
             
-            // Bersihkan URL tanpa melakukan reload halaman
             history.pushState(null, "", window.location.pathname);
         }
     });
 });
 
-// === HANDLE NAVBAR SCROLL & CLEAN URL HASH ===
 document.querySelectorAll('.nav-links a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
@@ -152,4 +136,46 @@ document.querySelectorAll('.nav-links a').forEach(anchor => {
             }
         }
     });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const statsContainer = document.querySelector('.about-stats');
+    const statNumbers = document.querySelectorAll('.stat-number');
+    let hasAnimated = false;
+
+    const animateCounters = () => {
+        statNumbers.forEach(num => {
+            const target = +num.getAttribute('data-target');
+            const duration = 1800;
+            const frameDuration = 1000 / 60;
+            const totalFrames = Math.round(duration / frameDuration);
+            let frame = 0;
+
+            const counter = setInterval(() => {
+                frame++;
+                const progress = frame / totalFrames;
+                const currentCount = Math.round(target * (1 - Math.pow(1 - progress, 2)));
+
+                num.textContent = currentCount;
+
+                if (frame === totalFrames) {
+                    num.textContent = target;
+                    clearInterval(counter);
+                }
+            }, frameDuration);
+        });
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !hasAnimated) {
+                animateCounters();
+                hasAnimated = true;
+            }
+        });
+    }, { threshold: 0.4 });
+
+    if (statsContainer) {
+        observer.observe(statsContainer);
+    }
 });

@@ -5,17 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Gusti Adrianta, a passionate 3D Artist and Graphic Designer crafting immersive visual experiences.">
     
-    <!-- Warna Aksen Line Embed (Discord / Browser Header) -->
     <meta name="theme-color" content="#2563eb">
 
-    <!-- Open Graph / Discord Embed Preview -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gustiadrian.com/">
     <meta property="og:title" content="Gusti Adrianta">
     <meta property="og:description" content="Portfolio of Gusti Adrianta, a passionate 3D Artist and Graphic Designer crafting immersive visual experiences.">
     <meta property="og:image" content="https://api.microlink.io/?url=https%3A%2F%2Fgustiadrian.com%2F&screenshot=true&embed=screenshot.url">
 
-    <!-- Twitter / Discord Large Card Format -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Gusti Adrianta">
     <meta name="twitter:description" content="Portfolio of Gusti Adrianta, a passionate 3D Artist and Graphic Designer crafting immersive visual experiences.">
@@ -36,227 +33,72 @@
 
     <header class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">GustiAdrian</a>
+            <a href="/" class="logo" aria-label="Gusti Adrianta Home">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="1500 0 2273.72 2471.59">
+                    <path fill="currentColor" d="M2680.37,1443.17v-387.51c-3.13,.38-5.72,.42-8.16,1.04-15.82,3.97-31.61,8.09-47.42,12.08-3.12,.79-6.33,1.21-10.28,1.94v-196.02c84.64-21.69,169.59-43.45,256.01-65.59,.25,5,.61,8.79,.61,12.58,.22,156.21,.42,312.43,.6,468.64,.04,30.64,0,61.29,.05,91.93,0,3.5,.31,7.01,.54,11.8,112.46-28.72,223.58-57.1,334.67-85.47v-388.68c-87.82,22.48-174.75,44.72-261.68,66.97-2.27-9.24-3.04-753.45-1.08-775.36C3220.03,141.11,3495.9,70.68,3772.78,0c.38,3.98,.89,6.82,.89,9.67,.05,58.62,.06,117.25,.04,175.87,0,9.49-.1,9.43-9.37,11.86-28.66,7.51-57.34,14.91-85.92,22.7-14.49,3.95-13.35,1.19-13.34,17.01,.05,234.83,.11,469.66,.22,704.48,.04,91.93-.07,183.86,.46,275.79,.24,42.68-11.4,81.5-34.74,116.92-19.23,29.18-44.59,51.93-74.76,69.38-23.47,13.58-48.39,23.73-74.49,31.01-1.87,.52-3.82,.73-6.94,1.3-.14-4.42-.36-8.27-.36-12.12,.05-79.94,.17-159.88,.18-239.82,.05-298.78,.07-597.56,.09-896.34,0-4.56,0-9.12,0-15.2-114.37,29.38-227.03,58.33-339.6,87.25v381.74c87.96-22.55,174.87-44.83,262.83-67.39v782.53c-381.93,97.82-763.95,195.65-1145.94,293.49-2.3-7.86-3.12-178.1-1.03-196.97,35.22-9.21,70.83-18.52,107.75-28.18,0-4.95,0-9.84,0-14.73,.09-288.45,.18-576.91,.27-865.36,.01-37.31,.23-74.61,0-111.92-.48-75.72,32.65-133.76,93.37-176.96,29.37-20.89,62.53-34.01,97.22-43.08,87.61-22.89,175.29-45.49,262.98-68.11,17.71-4.57,35.54-8.7,53.32-12.99,1.26-.3,2.6-.27,3.86-.39,2.04,7.26,2.8,481.77,.78,494.65-62.58,16.08-125.33,32.2-189.41,48.66V475.78c-15.99,2.47-30.1,7.15-44.46,10.6-14.24,3.43-28.38,7.25-42.57,10.9-14.48,3.73-28.95,7.46-43.84,11.3v967.86c43.74-11.19,86.48-22.12,130.09-33.27Z"/>
+                </svg>
+            </a>
             
             <div class="nav-links">
-                <a href="index.html#work">Work</a>
-                <a href="index.html#about">About</a>
-                <a href="index.html#contact">Contact</a>
-                <a href="discuss.html" class="discuss-link" style="color: var(--accent-blue-bright); font-weight: 600;">Discuss</a>
+                <a href="/#work">Work</a>
+                <a href="/#about">About</a>
+                <a href="/#contact">Contact</a>
             </div>
             
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
-                <i class="fa-solid fa-moon" id="theme-icon"></i>
-            </button>
+            <div class="nav-actions">
+                <a href="discuss" class="discuss-btn glow-effect">Discuss</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
         </div>
     </header>
 
     <main>
-        <!-- === ORDER SECTION (BENTO GRID + DIRECT CONTACT) === -->
-        <section class="checkout-section reveal active">
-            <div class="inquiry-grid" style="width: 100%; max-width: 1200px; margin: 0 auto;">
+        <section class="inquiry-section reveal active" style="padding-top: 140px; padding-bottom: 4rem; text-align: center;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 5vw;">
                 
-                <!-- === KIRI: DIRECT CONTACT === -->
-                <div class="direct-contact">
-                    <h2 class="contact-title" style="color: var(--text-color);">
-                        Let's <em style="font-family: 'Playfair Display', serif; font-style: italic; color: var(--accent-blue-bright);">Connect</em>.
-                    </h2>
-                    <p class="contact-desc">Prefer to chat directly? Feel free to reach out via the platforms below.</p>
+                <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 700; color: var(--text-color); margin-bottom: 1rem;">
+                    Select a <em style="font-family: 'Playfair Display', serif; font-style: italic; color: var(--accent-blue-bright);">Package</em>.
+                </h2>
+                <p class="mono-subtitle" style="margin-bottom: 3rem; font-size: 0.9rem;">Choose the service that best fits your needs to proceed.</p>
+                
+                <div class="pricelist-grid">
                     
-                    <div class="social-cards">
-                        <!-- Discord -->
-                        <a href="https://discord.com/users/946576741256810578" target="_blank" rel="noopener noreferrer" class="social-card discord">
-                            <div class="social-icon-wrapper"><i class="fa-brands fa-discord"></i></div>
-                            <div class="social-text">
-                                <span class="social-name">Discord</span>
-                                <span class="social-handle">gusti.fx</span>
-                            </div>
-                        </a>
-                        
-                        <!-- Twitter / X -->
-                        <a href="https://twitter.com/GustiRBX" target="_blank" rel="noopener noreferrer" class="social-card twitter">
-                            <div class="social-icon-wrapper"><i class="fa-brands fa-x-twitter"></i></div>
-                            <div class="social-text">
-                                <span class="social-name">Twitter (X)</span>
-                                <span class="social-handle">@GustiRBX</span>
-                            </div>
-                        </a>
-                        
-                        <!-- Instagram -->
-                        <a href="https://instagram.com/gusti.fx" target="_blank" rel="noopener noreferrer" class="social-card instagram">
-                            <div class="social-icon-wrapper"><i class="fa-brands fa-instagram"></i></div>
-                            <div class="social-text">
-                                <span class="social-name">Instagram</span>
-                                <span class="social-handle">@gusti.fx</span>
-                            </div>
-                        </a>
-                    </div>
+                    <a href="contact.html" class="price-card">
+                        <div class="price-img" style="background-image: url('images/tes3.png');"></div>
+                        <div class="price-content">
+                            <h3 class="price-title">Icon Design</h3>
+                            <div class="price-amount">$10 <span>/ Rp 160.000</span></div>
+                            <p class="price-desc">High-impact custom icons engineered to grab instant attention and build your visual identity.</p>
+                            <div class="price-btn">Choose Package <i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
+                    </a>
+
+                    <a href="contact.html" class="price-card">
+                        <div class="price-img" style="background-image: url('images/tes1.png');"></div>
+                        <div class="price-content">
+                            <h3 class="price-title">Thumbnail Design</h3>
+                            <div class="price-amount">$15 <span>/ Rp 240.000</span></div>
+                            <p class="price-desc">Eye-catching 3D & GFX thumbnails with high contrast and storytelling designed to drive clicks.</p>
+                            <div class="price-btn">Choose Package <i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
+                    </a>
+
+                    <a href="contact.html" class="price-card">
+                        <div class="price-img" style="background-image: url('images/tes2.png');"></div>
+                        <div class="price-content">
+                            <h3 class="price-title">Custom Design</h3>
+                            <div class="price-amount">$7 <span>/ Rp 112.000</span></div>
+                            <p class="price-desc">Tailored banners, UI graphics, and promo visuals brought to life to match your exact vision.</p>
+                            <div class="price-btn">Choose Package <i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
+                    </a>
+
                 </div>
 
-                <!-- === KANAN: BENTO FORM INQUIRY === -->
-                <div class="glass-panel bento-form-wrapper" style="margin: 0; max-width: 100%;">
-                    <div class="panel-header" style="margin-bottom: 2rem; text-align: center;">
-                        <h2 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-color);">
-                            Start Your <em style="font-family: 'Playfair Display', serif; font-style: italic; color: var(--accent-blue-bright);">Project</em>.
-                        </h2>
-                        <p class="mono-subtitle">Select a package and provide your details.</p>
-                    </div>
-
-                    <form id="orderForm" class="modern-form">
-                        <div class="input-group">
-                            <input type="text" id="clientName" name="clientName" required placeholder=" ">
-                            <label for="clientName">Full Name / Nickname</label>
-                        </div>
-
-                        <div class="input-group">
-                            <input type="email" id="clientEmail" name="clientEmail" required placeholder=" ">
-                            <label for="clientEmail">Email Address</label>
-                        </div>
-
-                        <fieldset class="communication-group">
-                            <legend class="form-label">How should we communicate?</legend>
-                            <div class="radio-options">
-                                <label class="radio-label">
-                                    <input type="radio" name="comm_method" value="discord" checked>
-                                    <span class="radio-custom"></span>
-                                    Discord (Recommended)
-                                </label>
-                                <label class="radio-label">
-                                    <input type="radio" name="comm_method" value="email">
-                                    <span class="radio-custom"></span>
-                                    Email Only
-                                </label>
-                            </div>
-                        </fieldset>
-
-                        <div class="input-group" id="discordInputGroup">
-                            <input type="text" id="discordUsername" name="discordUsername" placeholder=" ">
-                            <label for="discordUsername">Discord Username (e.g. gusti.fx)</label>
-                        </div>
-
-                        <div class="input-group select-wrapper">
-                            <select id="packageSelect" name="packageSelect" required>
-                                <option value="" disabled selected>Select a Design Package</option>
-                                <option value="icon">Icon Design - $10 (Rp 160.000)</option>
-                                <option value="thumbnail">Thumbnail Design - $15 (Rp 240.000)</option>
-                                <option value="custom">Custom Design - $7 (Rp 112.000)</option>
-                            </select>
-                            <i class="fa-solid fa-chevron-down select-icon"></i>
-                        </div>
-
-                        <!-- NEW QUANTITY FIELD -->
-                        <div class="input-group">
-                            <input type="number" id="orderQuantity" name="orderQuantity" min="1" value="1" required placeholder=" ">
-                            <label for="orderQuantity">Quantity</label>
-                        </div>
-                        <!-- End of form inputs -->
-                        
-                        <!-- Catatan Transparansi Biaya Admin -->
-                        <p class="mono-subtitle" style="font-size: 0.7rem; margin-top: 0.5rem; margin-bottom: -0.5rem; line-height: 1.4; color: var(--text-muted);">
-                            *Prices include transaction & admin fees.
-                        </p>
-
-                        <button type="submit" class="submit-btn glow-effect">
-                            Proceed to Payment <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </form>
-                </div>
-                
             </div>
         </section>
-
-        <!-- === PAYMENT MODAL (GLASSMORPHISM) === -->
-        <div id="paymentModal" class="modal-overlay" aria-hidden="true">
-            <div class="glass-panel modal-content" role="dialog" aria-modal="true">
-                <button id="closeModalBtn" class="close-btn" aria-label="Close modal">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-                
-                <div class="modal-header" style="margin-bottom: 1.5rem;">
-                    <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--text-color);">Complete Your Order</h3>
-                    <p class="mono-subtitle" style="margin-top: 0.5rem;">Choose your preferred payment method</p>
-                </div>
-
-                <div class="tab-navigation">
-                    <button type="button" class="tab-btn active" data-tab="paypal">PayPal</button>
-                    <button type="button" class="tab-btn" data-tab="doku">DOKU (QRIS)</button>
-                </div>
-
-                <div class="tab-panels">
-                    <!-- PayPal Tab -->
-                    <div id="tab-paypal" class="tab-panel active">
-                        <div class="payment-card center-content">
-                            <i class="fa-brands fa-paypal brand-icon"></i>
-                            <p class="payment-desc">Fast and secure international payment.</p>
-                            <!-- TOTAL DISPLAY -->
-                            <h3 style="margin-bottom: 1rem; color: var(--text-color);">Total: $<span id="paypal-total-price">0.00</span></h3>
-                            
-                            <div id="paypal-button-container" style="position: relative; z-index: 1;"></div>
-                        </div>
-                    </div>
-
-                    <!-- DOKU Tab -->
-                    <div id="tab-doku" class="tab-panel">
-                        <div class="payment-card center-content">
-                            <i class="fa-solid fa-qrcode brand-icon" style="color: #ea1b25;"></i>
-                            <p class="payment-desc">Pay via QRIS (DOKU Wallet & All Indonesian Bank Apps).</p>
-                            <!-- TOTAL DISPLAY -->
-                            <h3 style="margin-bottom: 1rem; color: var(--text-color);">Total: Rp <span id="doku-total-price">0</span></h3>
-                            
-                            <!-- Dynamic QRIS Placeholder -->
-                            <div id="qris-container" style="background: #fff; padding: 1rem; border-radius: 16px; display: none; margin: 1rem auto; width: 220px; height: 220px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
-                                <img id="qris-image" src="" alt="Dynamic QRIS" style="width: 100%; height: 100%; object-fit: contain;">
-                            </div>
-
-                            <button type="button" id="doku-btn" class="submit-btn glow-effect" style="background: #ea1b25; border: none; z-index: 1; position: relative;">
-                                Generate QRIS <i class="fa-solid fa-qrcode"></i>
-                            </button>
-                            
-                            <!-- Check Payment Status Button (Appears after QRIS generated) -->
-                            <button type="button" id="doku-confirm-btn" class="secondary-btn" style="display: none; width: 100%; margin-top: 1rem; justify-content: center;">
-                                I Have Paid
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- === TERMS & CONDITIONS MODAL === -->
-            <div id="tncModal" class="modal-overlay" aria-hidden="true">
-                <div class="glass-panel modal-content" role="dialog" aria-modal="true" style="max-width: 700px; max-height: 85vh; display: flex; flex-direction: column;">
-                    <button id="closeTncBtn" class="close-btn" aria-label="Close modal">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                    
-                    <div class="modal-header" style="margin-bottom: 1rem;">
-                        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--text-color);">Terms & Conditions</h3>
-                        <p class="mono-subtitle" style="margin-top: 0.5rem;">Digital Goods & Services</p>
-                    </div>
-                    
-                    <div class="tnc-content" style="overflow-y: auto; padding-right: 1rem; font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; text-align: left;">
-                        <h4>1. CONDITIONS OF USE</h4>
-                        <p>Gusti Adrianta (the "Site") is offered to you, the user, conditioned on your acceptance of the terms, conditions and notices contained or incorporated by reference herein and such additional terms and conditions, agreements, and notices that may apply to any page or section of the Site.[cite: 17]</p>
-                        
-                        <h4>2. OVERVIEW</h4>
-                        <p>Your use of this Site constitutes your agreement to all terms, conditions and notices. Please read them carefully. By using this Site, you agree to these Terms and Conditions, as well as any other terms, guidelines or rules that are applicable to any portion of this Site, without limitation or qualification.[cite: 17]</p>
-                        
-                        <h4>3. MODIFICATION OF THE SITE AND THESE TERMS</h4>
-                        <p>Gusti Adrianta reserves the right to change, modify, alter, update or discontinue the terms, conditions, and notices under which this Site is offered and the links, content, information, prices and any other materials offered via this Site at any time and from time to time without notice or further obligation to you.[cite: 17]</p>
-                        
-                        <h4>4. GRANT OF LICENSE</h4>
-                        <p>Gusti Adrianta grants you the right to access and use the purchased digital assets solely for your agreed purposes for the duration of this Agreement. You may not claim the digital artwork as your original creation or resell the source files without separate commercial agreements.[cite: 17]</p>
-                        
-                        <h4>5. PROPRIETARY RIGHTS</h4>
-                        <p>You acknowledge and agree that the original concept and working files remain the property of Gusti Adrianta, and you will use the final exported assets only under the terms and conditions described herein.[cite: 17]</p>
-                        
-                        <h4>6. PRIVACY POLICY</h4>
-                        <p>Your information is safe with us. We understand that privacy concerns are extremely important to our customers. You can rest assured that any information you submit to us will not be misused, abused or sold to any other parties. We only use your personal information to complete your order.[cite: 19]</p>
-                        
-                        <h4>7. APPLICABLE LAWS</h4>
-                        <p>These Terms and Conditions are governed by the law in force in Indonesia.[cite: 19]</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </main>
 
     <footer class="footer-section">
@@ -268,10 +110,7 @@
         </div>
     </footer>
 
-    <!-- Pastikan file CSS dan JS diperbarui dengan tambahan dari sebelumnya -->
-    <script src="discuss.js"></script>
+    <script src="script.js"></script>
     <script src="favicon.js"></script>
-    <script src="https://www.paypal.com/sdk/js?client-id=BAA9a7uVUVEiKuEn4J0wBMyRFpdm_hTHIAlZJoPRwauMoQ4UCXJBk7VWTsembo0Jz7qAX610UhyFArWgiU&currency=USD"></script>
-    <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="YOUR_CLIENT_KEY"></script>
 </body>
 </html>
