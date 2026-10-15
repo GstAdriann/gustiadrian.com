@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Gusti Adrianta, a passionate 3D Artist and Graphic Designer crafting immersive visual experiences.">
+    <title>Gusti Adrianta</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-transition"></div>
+    <div class="noise-overlay"></div>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">GustiAdrian</a>
+            
+            <div class="nav-links">
+                <a href="#work">Work</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="discuss" class="discuss-link" style="color: var(--accent-blue-bright); font-weight: 600;">Discuss</a>
+            </div>
+            
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon" id="theme-icon"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content reveal">
+                <p class="mono-subtitle">3D Artist & Graphic Designer</p>
+                <h1 class="hero-title">
+                    Crafting digital <em>experiences</em><br>
+                    with <em>elegance</em> & precision.
+                </h1>
+                <p class="hero-desc">I specialize in creating visually striking 3D assets, dynamic graphic designs, and immersive visual storytelling that elevate brands and captivate audiences.</p>
+            </div>
+            <div class="hero-scroll-indicator mono-subtitle reveal">
+                <span>SCROLL TO EXPLORE</span>
+                <div class="line"></div>
+            </div>
+        </section>
+
+        <!-- Selected Work -->
+        <section id="work" class="work-section">
+            <div class="section-header reveal">
+                <h2 class="section-title">Featured <em>Works</em></h2>
+                <p class="mono-subtitle">( 2019 — now )</p>
+            </div>
+
+            <div class="work-container">
+                <article class="work-item reveal">
+                    <div class="work-image-wrapper">
+                        <div class="work-image parallax-img" style="background-image: url(/images/CineBlox.webp); background-size: cover; background-position: center;">
+                        </div>
+                    </div>
+                    <div class="work-meta">
+                        <h3><a href="https://www.roblox.com/games/5797596824/CineBlox" rel="noopener noreferrer" target="_blank" class="game-title">CineBlox 🍿 on Roblox</a></h3>
+                        <div class="work-tags mono-subtitle">
+                            <span>3D MODELING RENDERING</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="work-item reveal right-align">
+                    <div class="work-image-wrapper">
+                        <div class="work-image parallax-img" style="background-image: url(/images/UlarTangga.webp); background-size: cover; background-position: center;">
+                        </div>
+                    </div>
+                    <div class="work-meta">
+                        <h3><a href="https://www.roblox.com/games/81453219122878/Ular-Tangga" rel="noopener noreferrer" target="_blank" class="game-title">Ular Tangga 🐍 on Roblox</a></h3>
+                        <div class="work-tags mono-subtitle">
+                            <span>GRAPHIC DESIGN</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="about-content reveal">
+                <h2 class="hero-title">
+                    Blending visual <em>aesthetics</em><br>
+                    with creative <em>storytelling</em>.
+                </h2>
+                <div class="about-grid">
+                    <p class="about-text">Based in Indonesia, I bring ideas to life through a combination of meticulous 3D artistry and clean, modern graphic design. Whether it's modeling complex environments or designing impactful brand visuals, my goal is to deliver high-quality work that resonates and leaves a lasting impression.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer-section reveal">
+        <p class="mono-subtitle">GOT A PROJECT IN MIND?</p>
+        <a href="discuss.html" class="big-email">Start Discuss</a>
+        
+        <div class="footer-bottom">
+            <div class="socials mono-subtitle">
+                <a href="mailto:gustixfz@gmail.com" rel="noopener noreferrer">gustixfz@gmail.com</a>
+            </div>
+            <span class="mono-subtitle">&copy; 2026 GUSTI ADRIANTA. ALL RIGHTS RESERVED.</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="favicon.js"></script>
+</body>
+</html>
