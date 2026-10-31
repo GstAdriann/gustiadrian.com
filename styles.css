@@ -412,8 +412,9 @@ body.page-loaded main { opacity: 1; transform: translateY(0); }
 ========================================= */
 .testimonial-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Menggunakan auto-fit agar lebih responsif */
     gap: 2rem;
+    width: 100%; /* Memastikan grid menggunakan lebar penuh kontainer */
 }
 
 @media (max-width: 1000px) { .testimonial-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -424,7 +425,6 @@ body.page-loaded main { opacity: 1; transform: translateY(0); }
     border: 1px solid var(--glass-border);
     border-top: 1px solid var(--glass-highlight);
     border-radius: 20px;
-    padding: 1.8rem;
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
@@ -433,6 +433,10 @@ body.page-loaded main { opacity: 1; transform: translateY(0); }
     /* Sedikit dipercepat menjadi 0.3s agar lebih snappy */
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
     will-change: transform; /* Memberi tahu browser untuk memprioritaskan animasi kotak ini */
+    padding: 2rem; /* Menambah ruang di dalam kartu */
+    box-sizing: border-box;
+    width: 100%; /* Memastikan kartu memenuhi kolom grid */
+    margin: 0; /* Menghilangkan margin bawaan yang tidak perlu */
 }
 
 .testi-card:hover {
