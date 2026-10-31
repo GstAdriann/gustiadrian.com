@@ -179,3 +179,78 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(statsContainer);
     }
 });
+
+// === 6. TESTIMONIAL IMAGE GALLERY MODAL ===
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("imageModal");
+    if (modal) {
+        const modalImg = document.getElementById("modalImg");
+        const closeBtn = document.querySelector(".close-modal");
+        const prevBtn = document.getElementById("prevImg");
+        const nextBtn = document.getElementById("nextImg");
+        const caption = document.getElementById("modalCaption");
+        
+        let currentImages = [];
+        let currentIndex = 0;
+
+        // Membaca attribute data-images ketika dipencet
+        document.querySelectorAll('.testi-preview').forEach(preview => {
+            preview.addEventListener('click', function() {
+                const imgsRaw = this.getAttribute('data-images');
+                if (imgsRaw) {
+                    currentImages = imgsRaw.split(',').map(img => img.trim());
+                    currentIndex = 0;
+                    updateModalImage();
+                    modal.classList.add("active");
+                    
+                    // Stop scrolling di layar belakang
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        // Ganti gambar dan angka urutan di dalam modal
+        function updateModalImage() {
+            if (currentImages.length > 0) {
+                modalImg.src = currentImages[currentIndex];
+                caption.textContent = `${currentIndex + 1} / ${currentImages.length}`;
+                
+                // --- TAMBAHKAN 2 BARIS INI UNTUK ANIMASI HALUS ---
+                modalImg.style.animation = 'none';
+                setTimeout(() => modalImg.style.animation = 'imgFadeIn 0.3s ease-out', 10);
+                // -------------------------------------------------
+
+                // Hilangkan tombol kiri-kanan jika gambar hanya 1
+                const showNav = currentImages.length > 1 ? "flex" : "none";
+                prevBtn.style.display = showNav;
+                nextBtn.style.display = showNav;
+            }
+        }
+
+        function closeModal() {
+            modal.classList.remove("active");
+            document.body.style.overflow = '';
+            // Reset gambar setelah animasi menutup selesai
+            setTimeout(() => modalImg.src = '', 300);
+        }
+
+        // Close dengan tombol X atau klik di luar gambar
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => { 
+            if (e.target === modal || e.target.classList.contains('modal-content-wrapper')) {
+                closeModal(); 
+            }
+        });
+
+        // Navigasi Kiri & Kanan
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+            updateModalImage();
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % currentImages.length;
+            updateModalImage();
+        });
+    }
+});
